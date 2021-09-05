@@ -1,4 +1,4 @@
-package com.example.carsalemongodb;
+package com.rstzkrt.carsalemongodb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

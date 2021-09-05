@@ -1,4 +1,4 @@
-package com.example.carsalemongodb;
+package com.rstzkrt.carsalemongodb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
