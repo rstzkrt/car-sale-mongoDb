@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      auto-index-creation: true
+      database: car-sale-db
+      uri: mongodb://localhost:27017
