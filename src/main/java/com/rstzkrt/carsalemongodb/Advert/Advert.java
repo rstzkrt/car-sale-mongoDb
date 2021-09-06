@@ -48,17 +48,17 @@ public class Advert {
     private String coverPhoto;
 
     @Indexed
-    private String car_brand;
+    private String carBrand;
 
-    private String car_transmission;
+    private String carTransmission;
 
-    private Double car_mileage;
+    private Double carMileage;
 
-    private String car_bodyType;
+    private String carBodyType;
 
-    private String car_fuelType;
+    private String carFuelType;
 
-    private String car_condition;
+    private String carCondition;
 
     private List<String> photos = new ArrayList<>();
 
@@ -81,12 +81,12 @@ public class Advert {
         this.postDate = postDate;
         this.city = city;
         this.coverPhoto = coverPhoto;
-        this.car_brand = car_brand;
-        this.car_transmission = car_transmission;
-        this.car_mileage = car_mileage;
-        this.car_bodyType = car_bodyType;
-        this.car_fuelType = car_fuelType;
-        this.car_condition = car_condition;
+        this.carBrand = car_brand;
+        this.carTransmission = car_transmission;
+        this.carMileage = car_mileage;
+        this.carBodyType = car_bodyType;
+        this.carFuelType = car_fuelType;
+        this.carCondition = car_condition;
         this.photos = photos;
     }
     public Advert(String description,
@@ -107,11 +107,11 @@ public class Advert {
         this.postDate = postDate;
         this.city = city;
         this.coverPhoto = coverPhoto;
-        this.car_brand = car_brand;
-        this.car_transmission = car_transmission;
-        this.car_mileage = car_mileage;
-        this.car_bodyType = car_bodyType;
-        this.car_fuelType = car_fuelType;
-        this.car_condition = car_condition;
+        this.carBrand = car_brand;
+        this.carTransmission = car_transmission;
+        this.carMileage = car_mileage;
+        this.carBodyType = car_bodyType;
+        this.carFuelType = car_fuelType;
+        this.carCondition = car_condition;
     }
 }

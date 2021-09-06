@@ -4,7 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.rstzkrt.carsalemongodb.Advert.Advert;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+
+
 import org.hibernate.validator.constraints.URL;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.Id;
@@ -31,9 +32,9 @@ public class User {
     @Id
     private String id;
 
-    @Indexed(unique = true)
-    @NotBlank
-    private String uid;
+//    @Indexed(unique = true)
+//    @NotBlank
+//    private String uid;
 
     private String firstName;
 
