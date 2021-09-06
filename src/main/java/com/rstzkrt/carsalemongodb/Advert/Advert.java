@@ -31,8 +31,10 @@ public class Advert {
     @JsonSerialize(using = ObjectIdJsonSerializer.class)
     private ObjectId postedBy;
 
+    @Indexed
     private String description;
 
+    @Indexed
     private String title;
 
     private Double price;
@@ -45,6 +47,7 @@ public class Advert {
     @URL
     private String coverPhoto;
 
+    @Indexed
     private String car_brand;
 
     private String car_transmission;
