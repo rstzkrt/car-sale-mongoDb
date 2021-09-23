@@ -1,18 +1,13 @@
 package com.rstzkrt.carsalemongodb.User;
 
-import com.rstzkrt.carsalemongodb.Advert.Advert;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
+import org.springframework.transaction.annotation.Transactional;
 
 public interface UserService {
 
     @Transactional
     int deleteUser(String userId);
 
-    List<Advert> getFavorites();
+    User create(User user);
 
-    User favorite(String advertId) throws Exception;
-
-    User unfavorite(String advertId) throws Exception;
 }
