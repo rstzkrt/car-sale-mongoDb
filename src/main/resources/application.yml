@@ -4,3 +4,40 @@ spring:
       auto-index-creation: true
       database: car-sale-db
       uri: mongodb://localhost:27017
+
+security:
+  firebase-props:
+    database-url: https://car-sale-auth.firebaseapp.com
+  allow-credentials: true
+  allowed-origins:
+    - http://localhost:4200
+  allowed-methods:
+    - GET
+    - POST
+    - PUT
+    - PATCH
+    - DELETE
+    - OPTIONS
+  allowed-headers:
+    - Authorization
+    - Origin
+    - Content-Type
+    - Accept
+    - Accept-Encoding
+    - Accept-Language
+    - Access-Control-Allow-Origin
+    - Access-Control-Allow-Headers
+    - Access-Control-Request-Method
+    - X-Requested-With
+    - X-Auth-Token
+    - X-Xsrf-Token
+    - Cache-Control
+    - Id-Token
+  exposed-headers:
+    - X-Xsrf-Token
+  valid-application-roles:
+    - ROLE_ADMIN
+    - ROLE_SUPER
+    - ROLE_MODERATOR
+  super-admins:
+    - rstzkrt@gmail.com
