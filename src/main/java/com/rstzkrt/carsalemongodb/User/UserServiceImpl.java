@@ -14,11 +14,14 @@ import java.util.List;
 @Slf4j
 public class UserServiceImpl implements UserService {
 
-    @Autowired
-    private AdvertRepository advertRepository;
+    private final AdvertRepository advertRepository;
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
+
+    public UserServiceImpl(AdvertRepository advertRepository, UserRepository userRepository) {
+        this.advertRepository = advertRepository;
+        this.userRepository = userRepository;
+    }
 
 
     @Transactional
