@@ -73,12 +73,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic().disable().exceptionHandling()
                 .authenticationEntryPoint(restAuthenticationEntryPoint())
                 .and().authorizeRequests()
-                .antMatchers(restSecProps.getAllowedPublicApis().toArray(String[]::new)).permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/adverts/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/users/**").permitAll()
                 .antMatchers(HttpMethod.GET, "/users/**").permitAll()
-
                 .anyRequest().authenticated().and()
                 .addFilterBefore(tokenAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
