@@ -2,7 +2,6 @@ package com.rstzkrt.carsalemongodb.Advert;
 
 import com.rstzkrt.carsalemongodb.Advert.elasticSearch.EsAdvert;
 import com.rstzkrt.carsalemongodb.Advert.elasticSearch.EsAdvertRepository;
-import com.rstzkrt.carsalemongodb.Advert.elasticSearch.EsAdvertService;
 import com.rstzkrt.carsalemongodb.User.User;
 import com.rstzkrt.carsalemongodb.User.UserRepository;
 import org.bson.types.ObjectId;
@@ -18,14 +17,17 @@ import java.util.List;
 public class AdvertServiceImpl implements AdvertService {
 
 
-    @Autowired
-    private AdvertRepository advertRepository;
+    private final AdvertRepository advertRepository;
 
-    @Autowired
-    private UserRepository userRepository;
+    private final UserRepository userRepository;
 
-    @Autowired
-    private EsAdvertRepository esAdvertRepository;
+    private final EsAdvertRepository esAdvertRepository;
+
+    public AdvertServiceImpl(AdvertRepository advertRepository, UserRepository userRepository, EsAdvertRepository esAdvertRepository) {
+        this.advertRepository = advertRepository;
+        this.userRepository = userRepository;
+        this.esAdvertRepository = esAdvertRepository;
+    }
 
     @Override
     public AdvertResponseDTO getAdvert(String advertId) {
