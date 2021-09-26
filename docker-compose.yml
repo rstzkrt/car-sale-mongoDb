@@ -6,5 +6,10 @@ services:
       discovery.type: single-node
       ES_JAVA_OPTS: -Xms512m -Xmx512m
       xpack.security.enabled: "false"
+  mongodb:
+    image: mongo:latest
+    container_name: carsale_mongodb
+    environment:
+      - MONGO_INITDB_DATABASE=mongodb://localhost:27017
     ports:
-      - 9200:9200
+     - 27017:27017
