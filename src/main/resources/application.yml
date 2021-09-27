@@ -11,6 +11,7 @@ security:
   allow-credentials: true
   allowed-origins:
     - http://localhost:4200
+    - https://car-sale-app.herokuapp.com
   allowed-methods:
     - GET
     - POST
