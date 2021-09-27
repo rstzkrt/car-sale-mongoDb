@@ -12,6 +12,7 @@ security:
   allowed-origins:
     - http://localhost:4200
     - https://car-sale-app.herokuapp.com
+    - https://car-sale-app.herokuapp.com/adverts
   allowed-methods:
     - GET
     - POST
